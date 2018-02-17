@@ -56,4 +56,14 @@ public class QuestManager {
         return quests.stream().filter(predicate::test).findFirst().orElse(null);
     }
 
+    public boolean hasFinished(Quest constant) {
+        AbstractQuest quest = getQuest(q -> q.getQuest() == constant);
+        return quest != null && quest.isFinished();
+    }
+
+    public boolean hasStarted(Quest constant) {
+        AbstractQuest quest = getQuest(q -> q.getQuest() == constant);
+        return quest != null && quest.hasStarted();
+    }
+
 }

@@ -9,4 +9,7 @@ public interface QuestHandler {
      */
     MethodContext getDreambot();
 
+    /*
+     * You could add the abstract fields from AbstractQuest in here too, depending on your needs
+     */
 }
